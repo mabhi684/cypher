@@ -1,0 +1,32 @@
+<div class="col-md-6 d-flex  grid-margin">
+    <div class="row flex-grow">
+        <div class="col-12 grid-margin">
+            <div class="card" >
+                <div *ngIf="error" class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Login</h4>
+                    <form class="forms-sample" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                   placeholder="Enter email" formControlName="user_email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                   placeholder="Password" formControlName="user_password">
+                        </div>
+                        <button type="submit" class="btn btn-success mr-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </form>
+                </div>
+            </div>
+            <div class="template-demo">
+                <button type="button" class="btn btn-inverse-light btn-fw" routerLink="../signup">SignUp</button>
+            </div>
+
+        </div>
+    </div>
+</div>
