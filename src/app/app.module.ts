@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -27,11 +26,6 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { AddToolComponent } from './add-tool/add-tool.component';
-import {ErrorInterceptor} from './services/error-interceptor.service';
-import {BasicAuthInterceptor} from './services/basic-auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -54,32 +48,16 @@ import {BasicAuthInterceptor} from './services/basic-auth-interceptor.service';
     DropdownComponent,
     TooltipsComponent,
     CarouselComponent,
-    TabsComponent,
-    LoginComponent,
-    SignupComponent,
-    AddToolComponent
+    TabsComponent
   ],
-    imports: [
-        BrowserModule,
-        RouterModule,
-        AppRoutingModule,
-        FormsModule,
-        NgbModule,
-        ReactiveFormsModule,
-        HttpClientModule
-    ],
-  providers: [
-      {
-          provide: HTTP_INTERCEPTORS,
-          useClass: ErrorInterceptor,
-          multi: true
-      },
-      {
-          provide: HTTP_INTERCEPTORS,
-          useClass: BasicAuthInterceptor,
-          multi: true
-      }
+  imports: [
+    BrowserModule,
+    RouterModule,
+    AppRoutingModule,
+    FormsModule,
+    NgbModule
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
