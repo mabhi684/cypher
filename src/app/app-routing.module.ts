@@ -17,29 +17,35 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
+import {LoginComponent} from './login/login.component';
+import {SignupComponent} from './signup/signup.component';
+import {AddToolComponent} from './add-tool/add-tool.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'forms', component: FormsComponent },
-  { path: 'buttons', component: ButtonsComponent },
-  { path: 'tables', component: TablesComponent },
-  { path: 'icons', component: IconsComponent },
-  { path: 'typography', component: TypographyComponent },
-  { path: 'alerts', component: AlertsComponent },
-  { path: 'accordions', component: AccordionsComponent },
-  { path: 'badges', component: BadgesComponent },
-  { path: 'progressbar', component: ProgressbarComponent },
-  { path: 'breadcrumbs', component: BreadcrumbsComponent },
-  { path: 'pagination', component: PaginationComponent },
-  { path: 'dropdowns', component: DropdownComponent },
-  { path: 'tooltips', component: TooltipsComponent },
-  { path: 'carousel', component: CarouselComponent },
-  { path: 'tabs', component: TabsComponent }
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'forms', component: FormsComponent },
+    { path: 'buttons', component: ButtonsComponent },
+    { path: 'tables', component: TablesComponent },
+    { path: 'icons', component: IconsComponent },
+    { path: 'typography', component: TypographyComponent },
+    { path: 'alerts', component: AlertsComponent },
+    { path: 'accordions', component: AccordionsComponent },
+    { path: 'badges', component: BadgesComponent },
+    { path: 'progressbar', component: ProgressbarComponent },
+    { path: 'breadcrumbs', component: BreadcrumbsComponent },
+    { path: 'pagination', component: PaginationComponent },
+    { path: 'dropdowns', component: DropdownComponent },
+    { path: 'tooltips', component: TooltipsComponent },
+    { path: 'carousel', component: CarouselComponent },
+    { path: 'tabs', component: TabsComponent },
+    {path: 'login', component: LoginComponent},
+    {path: 'signup', component: SignupComponent},
+    {path: 'addTool', component: AddToolComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
